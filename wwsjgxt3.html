@@ -1,0 +1,4526 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+<head>
+    <meta charset="utf-8">
+    <!-- 引入 ECharts 文件 -->
+    <script src="echarts.js"></script>
+</head>
+<body style="height: 100%;">
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="height: 100%;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        var option = {
+
+    backgroundColor: new echarts.graphic.RadialGradient(0.3, 0.3, 0.8, [{
+
+        offset: 0,
+
+        color: '#f7f8fa'
+
+    }, {
+
+        offset: 1,
+
+        color: '#cdd0d5'
+
+    }]),
+
+    title: {
+
+        text: "数据分析课关系图",
+
+        subtext: "ZBH",
+
+        top: "top",
+
+        left: "center"
+
+    },
+
+    tooltip: {},
+
+    legend: [{
+
+        formatter: function(name) {
+
+            return echarts.format.truncateText(name, 60, '14px Microsoft Yahei', '…');
+
+        },
+
+        tooltip: {
+
+            show: true
+
+        },
+
+        selectedMode: 'false',
+
+        bottom: 20,
+
+        data: ['洪丹38', '徐姗16', '赵莎莎25', '马清汉23', '衡芸17', '桂敏11', '初明科21', '张波10', '孙士成9']
+
+    }],
+
+    toolbox: {
+
+        show: true,
+
+        feature: {
+
+            dataView: {
+
+                show: true,
+
+                readOnly: true
+
+            },
+
+            restore: {
+
+                show: true
+
+            },
+
+            saveAsImage: {
+
+                show: true
+
+            }
+
+        }
+
+    },
+
+    animationDuration: 3000,
+
+    animationEasingUpdate: 'quinticInOut',
+
+    series: [{
+
+        name: '王宏',
+
+        type: 'graph',
+
+        layout: 'force',
+
+ 
+
+        force: {
+
+            repulsion: 300
+
+        },
+
+        data: [{
+
+            "name": "王宏",
+
+            // "x": 0,
+
+            // y: 0,
+
+            "symbolSize": 150,
+
+            "draggable": "true",
+
+            "value": 9
+
+ 
+
+ 
+
+ 
+
+        }, {   
+
+ 
+
+        }, {   
+
+"name": "洪丹38",
+
+"value":    38,
+
+"symbolSize":   76,
+
+"category": "洪丹38",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "徐姗16",
+
+"value":    16,
+
+"symbolSize":   32,
+
+"category": "徐姗16",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "赵莎莎25",
+
+"value":    25,
+
+"symbolSize":   50,
+
+"category": "赵莎莎25",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "马清汉23",
+
+"value":    23,
+
+"symbolSize":   46,
+
+"category": "马清汉23",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "衡芸17",
+
+"value":    17,
+
+"symbolSize":   34,
+
+"category": "衡芸17",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "桂敏11",
+
+"value":    11,
+
+"symbolSize":   22,
+
+"category": "桂敏11",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "初明科21",
+
+"value":    21,
+
+"symbolSize":   42,
+
+"category": "初明科21",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "张波10",
+
+"value":    10,
+
+"symbolSize":   20,
+
+"category": "张波10",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "孙士成9",
+
+"value":    9,
+
+"symbolSize":   18,
+
+"category": "孙士成9",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "程明",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "洪丹38",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "何惠娟",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "徐姗16",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "成蕾",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "赵莎莎25",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "董英",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "洪丹38",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "方芳",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "徐姗16",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "吴林林",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "赵莎莎25",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "张文霞",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "马清汉23",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "任传青",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "衡芸17",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "范珊珊",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "桂敏11",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "范希杰",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "赵莎莎25",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "于言梅",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "洪丹38",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "张连英",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "初明科21",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "孙立平",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "初明科21",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "王建芬",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "初明科21",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "傅飞飞",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "初明科21",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "李克佳",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "洪丹38",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "杨燕",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "马清汉23",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "李艳军",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "桂敏11",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "王云清",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "徐姗16",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "肖兴",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "赵莎莎25",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "马义绘",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "0",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "彭林",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "赵莎莎25",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "郭威",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "徐姗16",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "陈玲",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "赵莎莎25",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "王丽燕",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "洪丹38",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "梁鹏",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "洪丹38",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "吴冬玲",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "赵莎莎25",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "李千丽",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "洪丹38",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "梁香",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "洪丹38",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "杨丽",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "洪丹38",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "李俏俏",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "张波10",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "王晓燕",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "衡芸17",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "陈彦宇",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "赵莎莎25",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "曹江丽",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "赵莎莎25",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "贺亚娟",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "洪丹38",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "黄小君",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "马清汉23",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "吴涛",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "洪丹38",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "周颖姬",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "赵莎莎25",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "谢梅香",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "洪丹38",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "宾锋",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "洪丹38",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "罗丽萍",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "徐姗16",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "苏蓉蓉",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "初明科21",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "杜定珍",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "马清汉23",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "莫丽琳",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "初明科21",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "张宁",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "衡芸17",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "孟晓艳",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "孙士成9",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "黄莺",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "衡芸17",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "沈芬莲",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "初明科21",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "徐利华",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "洪丹38",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "杜明霞",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "初明科21",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "陈程",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "洪丹38",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "胡智慧",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "洪丹38",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "亓园园",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "徐姗16",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "杨立惠",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "洪丹38",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "尚梦如",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "洪丹38",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "史娟丽",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "洪丹38",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "李小珍",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "洪丹38",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "杨丽君",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "马清汉23",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "白莹",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "初明科21",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "雷艳华",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "洪丹38",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "王盼盼",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "马清汉23",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "赵新丽",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "洪丹38",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "贾静",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "洪丹38",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "罗芬",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "张波10",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "沙璇",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "洪丹38",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "肖光凤",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "初明科21",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "黄群",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "初明科21",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "朱少霞",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "初明科21",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "严小露",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "马清汉23",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "王少洁",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "初明科21",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "徐倩",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "洪丹38",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "黄波",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "赵莎莎25",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "周林霞",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "洪丹38",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "高术",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "桂敏11",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "李晓艳",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "衡芸17",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "程为",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "马清汉23",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "易盛容",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "徐姗16",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "焦桂香",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "桂敏11",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "欧蓉",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "徐姗16",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "孟芳",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "张波10",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "袁文娟",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "赵莎莎25",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "王丽亚",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "孙士成9",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "葛雯",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "孙士成9",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "毛娟",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "孙士成9",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "宋婷婷",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "孙士成9",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "张春敏",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "赵莎莎25",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "韩娟",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "徐姗16",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "夏春莲",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "衡芸17",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "于芬芬",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "赵莎莎25",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "高雪娇",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "衡芸17",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "谢华",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "马清汉23",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "聂丽",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "马清汉23",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "聂凌",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "孙士成9",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "晏红",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "张波10",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "胡志霞",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "洪丹38",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "熊玲芬",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "洪丹38",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "罗丽琴",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "衡芸17",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "舒莲",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "马清汉23",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "严丽娟",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "孙士成9",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "黄珏",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "马清汉23",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "李召琴",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "衡芸17",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "杨文玉",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "洪丹38",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "郑兴莉",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "初明科21",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "曾从庆",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "马清汉23",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "朱鸿玲",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "马清汉23",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "邬晓英",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "衡芸17",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "靳素针",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "马清汉23",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "彭莉",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "衡芸17",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "李扬扬",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "马清汉23",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "朱佳",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "孙士成9",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "于敬丽",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "马清汉23",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "徐莹",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "初明科21",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "林玲",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "徐姗16",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "单秀平",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "初明科21",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "王露",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "徐姗16",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "王珊",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "桂敏11",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "薛顺玉",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "桂敏11",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "许平权",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "马清汉23",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "黄琳玉",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "马清汉23",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "贺淑贤",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "张波10",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "廖淑婷",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "初明科21",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "翁安莉",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "衡芸17",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "黄柳",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "桂敏11",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "林网能",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "洪丹38",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "蔡婉真",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "马清汉23",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "许彩凤",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "初明科21",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "廖媛媛",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "初明科21",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "庄友丽",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "洪丹38",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "甄明明",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "洪丹38",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "王辛辛",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "马清汉23",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "马光萍",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "孙士成9",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "杨红英",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "徐姗16",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "周飞",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "马清汉23",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "杜晓芹",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "张波10",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "李桂云",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "赵莎莎25",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "刘倩",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "桂敏11",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "钱倩",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "赵莎莎25",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "刘燕",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "衡芸17",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "杨素兰",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "徐姗16",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "张吉双",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "赵莎莎25",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "张丽娟",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "桂敏11",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "朱欢",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "初明科21",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "周洁",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "初明科21",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "张丽",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "洪丹38",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "刘春霞",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "洪丹38",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "关立成",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "衡芸17",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "高兰",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "徐姗16",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "齐丽娜",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "洪丹38",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "赵丽",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "赵莎莎25",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "许波",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "赵莎莎25",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "霍晓丽",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "张波10",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "张雪",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "洪丹38",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "张嘉",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "马清汉23",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "高卫卫",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "洪丹38",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "袁娟",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "赵莎莎25",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "杨翠玲",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "洪丹38",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "王淑霞",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "衡芸17",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "郭玉霞",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "张波10",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "姜姗",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "衡芸17",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "张大伟",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "0",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "樊丽",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "赵莎莎25",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "张宪丽",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "衡芸17",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "童琴",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "赵莎莎25",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "章萍",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "桂敏11",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "王俊",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "赵莎莎25",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "占杼桢",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "张波10",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "徐玉娟",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "徐姗16",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "汪 敏",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "徐姗16",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "吴芝云",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "赵莎莎25",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "顾英淑",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "张波10",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "路琳",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "赵莎莎25",
+
+"draggable":"true" 
+
+        }, {   
+
+"name": "李玉玲",
+
+"value":    1,
+
+"symbolSize":   4,
+
+"category": "桂敏11",
+
+"draggable":"true" 
+
+ 
+
+        }],
+
+        links: [{
+
+            "source": "王宏",
+
+            "target": "洪丹38"
+
+        }, {
+
+            "source": "王宏",
+
+            "target": "徐姗16"
+
+        }, {
+
+            "source": "王宏",
+
+            "target": "赵莎莎25"
+
+        }, {
+
+                    "source": "王宏",
+
+            "target": "马清汉23"
+
+        }, {
+
+            "source": "王宏",
+
+            "target": "衡芸17"
+
+        }, {
+
+            "source": "王宏",
+
+            "target": "桂敏11"
+
+        }, {
+
+            "source": "王宏",
+
+            "target": "初明科21"
+
+        }, {
+
+            "source": "王宏",
+
+            "target": "张波10"
+
+        }, {
+
+            "source": "王宏",
+
+            "target": "孙士成9"
+
+        }, {
+
+ 
+
+ 
+
+        },{
+
+"target":   "程明",
+
+"source":   "洪丹38",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "何惠娟",
+
+"source":   "徐姗16",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "成蕾",
+
+"source":   "赵莎莎25",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "董英",
+
+"source":   "洪丹38",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "方芳",
+
+"source":   "徐姗16",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "吴林林",
+
+"source":   "赵莎莎25",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "张文霞",
+
+"source":   "马清汉23",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "任传青",
+
+"source":   "衡芸17",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "范珊珊",
+
+"source":   "桂敏11",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "范希杰",
+
+"source":   "赵莎莎25",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "于言梅",
+
+"source":   "洪丹38",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "张连英",
+
+"source":   "初明科21",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "孙立平",
+
+"source":   "初明科21",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "王建芬",
+
+"source":   "初明科21",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "傅飞飞",
+
+"source":   "初明科21",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "李克佳",
+
+"source":   "洪丹38",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "杨燕",
+
+"source":   "马清汉23",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "李艳军",
+
+"source":   "桂敏11",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "王云清",
+
+"source":   "徐姗16",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "肖兴",
+
+"source":   "赵莎莎25",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "马义绘",
+
+"source":   "0",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "彭林",
+
+"source":   "赵莎莎25",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "郭威",
+
+"source":   "徐姗16",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "陈玲",
+
+"source":   "赵莎莎25",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "王丽燕",
+
+"source":   "洪丹38",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "梁鹏",
+
+"source":   "洪丹38",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "吴冬玲",
+
+"source":   "赵莎莎25",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "李千丽",
+
+"source":   "洪丹38",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "梁香",
+
+"source":   "洪丹38",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "杨丽",
+
+"source":   "洪丹38",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "李俏俏",
+
+"source":   "张波10",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "王晓燕",
+
+"source":   "衡芸17",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "陈彦宇",
+
+"source":   "赵莎莎25",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "曹江丽",
+
+"source":   "赵莎莎25",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "贺亚娟",
+
+"source":   "洪丹38",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "黄小君",
+
+"source":   "马清汉23",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "吴涛",
+
+"source":   "洪丹38",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "周颖姬",
+
+"source":   "赵莎莎25",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "谢梅香",
+
+"source":   "洪丹38",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "宾锋",
+
+"source":   "洪丹38",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "罗丽萍",
+
+"source":   "徐姗16",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "苏蓉蓉",
+
+"source":   "初明科21",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "杜定珍",
+
+"source":   "马清汉23",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "莫丽琳",
+
+"source":   "初明科21",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "张宁",
+
+"source":   "衡芸17",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "孟晓艳",
+
+"source":   "孙士成9",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "黄莺",
+
+"source":   "衡芸17",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "沈芬莲",
+
+"source":   "初明科21",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "徐利华",
+
+"source":   "洪丹38",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "杜明霞",
+
+"source":   "初明科21",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "陈程",
+
+"source":   "洪丹38",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "胡智慧",
+
+"source":   "洪丹38",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "亓园园",
+
+"source":   "徐姗16",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "杨立惠",
+
+"source":   "洪丹38",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "尚梦如",
+
+"source":   "洪丹38",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "史娟丽",
+
+"source":   "洪丹38",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "李小珍",
+
+"source":   "洪丹38",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "杨丽君",
+
+"source":   "马清汉23",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "白莹",
+
+"source":   "初明科21",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "雷艳华",
+
+"source":   "洪丹38",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "王盼盼",
+
+"source":   "马清汉23",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "赵新丽",
+
+"source":   "洪丹38",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "贾静",
+
+"source":   "洪丹38",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "罗芬",
+
+"source":   "张波10",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "沙璇",
+
+"source":   "洪丹38",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "肖光凤",
+
+"source":   "初明科21",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "黄群",
+
+"source":   "初明科21",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "朱少霞",
+
+"source":   "初明科21",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "严小露",
+
+"source":   "马清汉23",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "王少洁",
+
+"source":   "初明科21",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "徐倩",
+
+"source":   "洪丹38",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "黄波",
+
+"source":   "赵莎莎25",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "周林霞",
+
+"source":   "洪丹38",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "高术",
+
+"source":   "桂敏11",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "李晓艳",
+
+"source":   "衡芸17",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "程为",
+
+"source":   "马清汉23",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "易盛容",
+
+"source":   "徐姗16",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "焦桂香",
+
+"source":   "桂敏11",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "欧蓉",
+
+"source":   "徐姗16",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "孟芳",
+
+"source":   "张波10",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "袁文娟",
+
+"source":   "赵莎莎25",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "王丽亚",
+
+"source":   "孙士成9",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "葛雯",
+
+"source":   "孙士成9",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "毛娟",
+
+"source":   "孙士成9",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "宋婷婷",
+
+"source":   "孙士成9",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "张春敏",
+
+"source":   "赵莎莎25",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "韩娟",
+
+"source":   "徐姗16",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "夏春莲",
+
+"source":   "衡芸17",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "于芬芬",
+
+"source":   "赵莎莎25",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "高雪娇",
+
+"source":   "衡芸17",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "谢华",
+
+"source":   "马清汉23",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "聂丽",
+
+"source":   "马清汉23",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "聂凌",
+
+"source":   "孙士成9",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "晏红",
+
+"source":   "张波10",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "胡志霞",
+
+"source":   "洪丹38",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "熊玲芬",
+
+"source":   "洪丹38",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "罗丽琴",
+
+"source":   "衡芸17",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "舒莲",
+
+"source":   "马清汉23",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "严丽娟",
+
+"source":   "孙士成9",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "黄珏",
+
+"source":   "马清汉23",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "李召琴",
+
+"source":   "衡芸17",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "杨文玉",
+
+"source":   "洪丹38",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "郑兴莉",
+
+"source":   "初明科21",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "曾从庆",
+
+"source":   "马清汉23",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "朱鸿玲",
+
+"source":   "马清汉23",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "邬晓英",
+
+"source":   "衡芸17",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "靳素针",
+
+"source":   "马清汉23",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "彭莉",
+
+"source":   "衡芸17",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "李扬扬",
+
+"source":   "马清汉23",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "朱佳",
+
+"source":   "孙士成9",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "于敬丽",
+
+"source":   "马清汉23",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "徐莹",
+
+"source":   "初明科21",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "林玲",
+
+"source":   "徐姗16",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "单秀平",
+
+"source":   "初明科21",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "王露",
+
+"source":   "徐姗16",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "王珊",
+
+"source":   "桂敏11",
+
+  
+
+   
+
+   
+
+},{
+
+"target":   "薛顺玉",
+
+"source":   "桂敏11",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "许平权",
+
+"source":   "马清汉23",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "黄琳玉",
+
+"source":   "马清汉23",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "贺淑贤",
+
+"source":   "张波10",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "廖淑婷",
+
+"source":   "初明科21",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "翁安莉",
+
+"source":   "衡芸17",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "黄柳",
+
+"source":   "桂敏11",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "林网能",
+
+"source":   "洪丹38",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "蔡婉真",
+
+"source":   "马清汉23",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "许彩凤",
+
+"source":   "初明科21",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "廖媛媛",
+
+"source":   "初明科21",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "庄友丽",
+
+"source":   "洪丹38",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "甄明明",
+
+"source":   "洪丹38",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "王辛辛",
+
+"source":   "马清汉23",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "马光萍",
+
+"source":   "孙士成9",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "杨红英",
+
+"source":   "徐姗16",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "周飞",
+
+"source":   "马清汉23",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "杜晓芹",
+
+"source":   "张波10",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "李桂云",
+
+"source":   "赵莎莎25",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "刘倩",
+
+"source":   "桂敏11",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "钱倩",
+
+"source":   "赵莎莎25",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "刘燕",
+
+"source":   "衡芸17",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "杨素兰",
+
+"source":   "徐姗16",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "张吉双",
+
+"source":   "赵莎莎25",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "张丽娟",
+
+"source":   "桂敏11",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "朱欢",
+
+"source":   "初明科21",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "周洁",
+
+"source":   "初明科21",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "张丽",
+
+"source":   "洪丹38",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "刘春霞",
+
+"source":   "洪丹38",
+
+  
+
+   
+
+   
+
+},{
+
+"target":   "关立成",
+
+"source":   "衡芸17",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "高兰",
+
+"source":   "徐姗16",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "齐丽娜",
+
+"source":   "洪丹38",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "赵丽",
+
+"source":   "赵莎莎25",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "许波",
+
+"source":   "赵莎莎25",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "霍晓丽",
+
+"source":   "张波10",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "张雪",
+
+"source":   "洪丹38",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "张嘉",
+
+"source":   "马清汉23",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "高卫卫",
+
+"source":   "洪丹38",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "袁娟",
+
+"source":   "赵莎莎25",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "杨翠玲",
+
+"source":   "洪丹38",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "王淑霞",
+
+"source":   "衡芸17",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "郭玉霞",
+
+"source":   "张波10",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "姜姗",
+
+"source":   "衡芸17",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "张大伟",
+
+"source":   "0",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "樊丽",
+
+"source":   "赵莎莎25",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "张宪丽",
+
+"source":   "衡芸17",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "童琴",
+
+"source":   "赵莎莎25",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "章萍",
+
+"source":   "桂敏11",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "王俊",
+
+"source":   "赵莎莎25",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "占杼桢",
+
+"source":   "张波10",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "徐玉娟",
+
+"source":   "徐姗16",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "汪 敏",
+
+"source":   "徐姗16",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "吴芝云",
+
+"source":   "赵莎莎25",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "顾英淑",
+
+"source":   "张波10",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "路琳",
+
+"source":   "赵莎莎25",
+
+   
+
+   
+
+   
+
+},{
+
+"target":   "李玉玲",
+
+"source":   "桂敏11",
+
+ 
+
+        }],
+
+        categories: [{
+
+            'name': '洪丹38'
+
+        }, {
+
+            'name': '徐姗16'
+
+        }, {
+
+            'name': '赵莎莎25'
+
+        }, {
+
+            'name': '马清汉23'
+
+        }, {
+
+            'name': '衡芸17'
+
+        }, {
+
+            'name': '桂敏11'
+
+        }, {
+
+            'name': '初明科21'
+
+        }, {
+
+            'name': '张波10'
+
+        }, {
+
+            'name': '孙士成9'
+
+        }, {
+
+ 
+
+        }],
+
+        focusNodeAdjacency: true,
+
+        roam: true,
+
+        label: {
+
+            normal: {
+
+ 
+
+                show: true,
+
+                position: 'top',
+
+ 
+
+            }
+
+        },
+
+        lineStyle: {
+
+            normal: {
+
+                color: 'source',
+
+                curveness: 0,
+
+                type: "solid"
+
+            }
+
+        }
+
+    }]
+
+};
+
+
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+</body>
+</html>
